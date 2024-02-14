@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scattered Slideshow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="slideshow-container">
+    <img src="https://cdn.discordapp.com/attachments/1178146933043380231/1207288283399192616/IMG-20240208-WA0175.jpg?ex=65df19d5&is=65cca4d5&hm=81b8e3e088a40a119e309134f638426614519d1d8c6d564363b290f1392d0cf1&" alt="Slide 1" class="slide" style="transform: translate(10%, 10%) rotate(20deg);">
+    <img src="https://cdn.discordapp.com/attachments/1178146933043380231/1207288283097341983/IMG-20240208-WA0207.jpg?ex=65df19d5&is=65cca4d5&hm=b30d21398dba00dbddbf2b488e8c225240ce577ae44b96a7e5ae8a7030398e09&" alt="Slide 2" class="slide" style="transform: translate(30%, 30%) rotate(-10deg);">
+    <img src="https://cdn.discordapp.com/attachments/1178146933043380231/1207288283705384960/IMG-20240208-WA0142.jpg?ex=65df19d5&is=65cca4d5&hm=0a864ddc9dbb90e436420296dee0e190422476df6d3396b8215d90b164be08be&" alt="Slide 3" class="slide" style="transform: translate(30%, 30%) rotate(+10deg);">
+    <img src="https://cdn.discordapp.com/attachments/1178146933043380231/1207288284011696148/IMG-20240208-WA0119.jpg?ex=65df19d5&is=65cca4d5&hm=ab140fa5c8390e9d32206b597f2aa0d511c1e37a77a97be9ef5d7c133a9491e6&" alt="Slide 4" class="slide" style="transform: translate(30%, 30%) rotate(-39deg);">
+    <img src="https://cdn.discordapp.com/attachments/1178146933043380231/1207288284255092756/IMG-20240208-WA0067.jpg?ex=65df19d5&is=65cca4d5&hm=f90954d1a9153d683a7c965cd82d9f45298e9168f1a38b1cc7dceb093d5eb8bb&" alt="Slide 5" class="slide" style="transform: translate(30%, 30%) rotate(-35deg);">
+    <img src="https://cdn.discordapp.com/attachments/1178146933043380231/1207288284506619975/IMG-20240112-WA0032.jpg?ex=65df19d5&is=65cca4d5&hm=4054f7f130e413809e196e0e66fa086b407f0dc62f0cab6bce3a77e64ba29ae7&" alt="Slide 6" class="slide" style="transform: translate(30%, 30%) rotate(-50deg);">
+    <img src="https://cdn.discordapp.com/attachments/1178146933043380231/1207288284783579186/IMG-20240208-WA0049.jpg?ex=65df19d5&is=65cca4d5&hm=94c840d15b60e737349a4653586fca585920f4767ac96219a2e5936fd8402557&" alt="Slide 7" class="slide" style="transform: translate(30%, 30%) rotate(-45deg);">
+    <!-- Add more images similarly with different positions and rotations -->
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const delay = 3000; // Time between each image appearing (in milliseconds)
+    let currentIndex = 0;
+
+    function showNextSlide() {
+      slides[currentIndex].style.opacity = 1;
+      currentIndex++;
+      if (currentIndex < slides.length) {
+        setTimeout(showNextSlide, delay);
+      }
+    }
+
+    showNextSlide();
+  </script>
+</body>
+</html>

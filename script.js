@@ -13,7 +13,7 @@ function startTimer(duration, display) {
     if (--timer < 0) {
       timer = duration;
       // Redirect to slideshow after 5 minutes
-      window.location.href = "slideshow.html";
+      window.location.href = "slide.html";
     }
   }, 1000);
 }
