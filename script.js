@@ -20,7 +20,7 @@ function startTimer(duration, display) {
 
 // Start timer when the page is loaded
 window.onload = function () {
-  var fiveMinutes = 60 * 0.5,
+  var fiveMinutes = 60 * 1.9,
       display = document.querySelector('#timer');
   startTimer(fiveMinutes, display);
 };
